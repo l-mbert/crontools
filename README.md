@@ -91,6 +91,13 @@ cronTiming.setAll({
 });
 ```
 
+### Building the current state
+
+```js
+cronTiming.build();
+// returns: "45 6 12 JAN-DEC *"
+```
+
 ---
 
 ## Using the Cronjob Timing Validator
