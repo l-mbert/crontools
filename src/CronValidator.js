@@ -100,7 +100,7 @@ const validateValue = (measurementOfTime, value) => {
 
   if (!Constants.MeasurementsOfTimeNames.includes(measurementOfTime)) {
     throw new Error(
-      `${measurementOfTime} is not a valid Measurement of Time. Please try one of these: ${Constants.MeasurementsOfTimeNames.join(
+      `${measurementOfTime} is not a valid Measurement of Time. Please try use one of these: ${Constants.MeasurementsOfTimeNames.join(
         ', ',
       )}`,
     );
@@ -135,11 +135,11 @@ const validateValue = (measurementOfTime, value) => {
     if (value.indexOf('-') >= 0) {
       let range = value.split('-');
 
-      if (!range[0]) {
+      if (typeof range[0] === 'undefined') {
         throw new Error('Invalid range. Please specify a minimum.');
       }
 
-      if (!range[1]) {
+      if (typeof range[1] === 'undefined') {
         throw new Error('Invalid range. Please specify a minimum.');
       }
 
@@ -157,6 +157,71 @@ const validateValue = (measurementOfTime, value) => {
           throw new Error(
             `${range[1]} is too big for "${measurementOfTime}" range. Maximum value is: ${Constants.MeasurementsOfTime[measurementOfTime].max}`,
           );
+        }
+      } else {
+        // Check if the upper and lower part of the range are either a valid month or a valid weekday
+        if (!Constants.AllowedWeekdays.includes(range[0])) {
+          if (!Constants.AllowedMonths.includes(range[0])) {
+            throw new Error(
+              `${range[0]} is an not allowed month. Please try use one of these: ${Constants.AllowedMonths.join(', ')}`,
+            );
+          } else {
+            throw new Error(
+              `${range[0]} is an not allowed weekday. Please try use one of these: ${Constants.AllowedWeekdays.join(
+                ', ',
+              )}`,
+            );
+          }
+        }
+
+        if (!Constants.AllowedWeekdays.includes(range[1])) {
+          if (!Constants.AllowedMonths.includes(range[1])) {
+            throw new Error(
+              `${range[1]} is an not allowed month. Please try use one of these: ${Constants.AllowedMonths.join(', ')}`,
+            );
+          } else {
+            throw new Error(
+              `${range[1]} is an not allowed weekday. Please try use one of these: ${Constants.AllowedWeekdays.join(
+                ', ',
+              )}`,
+            );
+          }
+        }
+
+        // The upper and lower part of the range are both either an valid weekday or month.
+        // Check which case applies and check the corresponding part to be an month or an weekday too.
+        if (Constants.AllowedWeekday.includes(range[0])) {
+          if (!Constants.AllowedWeekday.includes(range[1])) {
+            throw new Error(
+              'The upper part of the range is not an valid weekday but the lower part is. Both need to be an valid weekday.',
+            );
+          }
+
+          // Could be an valid month
+          if (Constants.AllowedMonths.includes(range[1])) {
+            if (!Constants.AllowedMonths.includes(range[0])) {
+              throw new Error(
+                'The lower part of the range is not an valid month but the upper part is. Both need to be an valid month.',
+              );
+            }
+          }
+        }
+
+        if (Constants.AllowedMonths.includes(range[0])) {
+          if (!Constants.AllowedMonths.includes(range[1])) {
+            throw new Error(
+              'The upper part of the range is not an valid month but the lower part is. Both need to be an valid month.',
+            );
+          }
+
+          // Could be an valid weekday
+          if (Constants.AllowedWeekday.includes(range[1])) {
+            if (!Constants.AllowedWeekday.includes(range[0])) {
+              throw new Error(
+                'The lower part of the range is not an valid weekday but the upper part is. Both need to be an valid weekday.',
+              );
+            }
+          }
         }
       }
     }
