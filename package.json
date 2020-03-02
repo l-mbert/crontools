@@ -5,7 +5,7 @@
   "main": "lib/crontime.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/l-mbert/crontime"
+    "url": "https://github.com/l-mbert/crontools"
   },
   "keywords": [
     "cron",
