@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing</title>
+  </head>
+  <body>
+    <script src="build/bundle.js"></script>
+    <script>
+      var cronBuilder = new Crontime.CronBuilder();
+      cronBuilder.addValue('hour', 3);
+      cronBuilder.addValue('hour', 23);
+      cronBuilder.addValue('dayOfTheMonth', '4');
+      cronBuilder.addValue('month', 'OCT');
+      cronBuilder.addValue('month', 'APR-OCT');
+      cronBuilder.addValue('month', 'DEC');
+      cronBuilder.removeValue('hour', 3);
+      cronBuilder.removeValue('month', 'DEC');
+      var timing = cronBuilder.build();
+      Crontime.CronValidator.validateExpression(timing);
+      console.log(timing);
+    </script>
+  </body>
+</html>
