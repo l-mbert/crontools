@@ -20,6 +20,38 @@ An Package to manipulate, build and validate Cronjob Timings.
 
 ---
 
+## Pattern and Naming
+
+I'm using [this Wikipedia Article](https://en.wikipedia.org/wiki/Cron) for reference.
+
+**Pattern**
+
+```
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                   7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * * command to execute
+```
+
+**Naming of the measurements of time**
+
+It's just using CamelCase for the name, but for clarification:
+
+| Wikipedia        | Package       |
+| ---------------- | ------------- |
+| minute           | minute        |
+| hour             | hour          |
+| day of the month | dayOfTheMonth |
+| month            | month         |
+| day of the week  | dayOfTheWeek  |
+
+---
+
 ## Using the Cronjob Timing Builder
 
 ```js
