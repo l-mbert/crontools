@@ -1,5 +1,5 @@
 {
-  "name": "crontime",
+  "name": "crontools",
   "version": "0.0.1",
   "description": "An JS Package to manipulate, build and validate Cronjob Timings.",
   "main": "lib/crontime.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "cron",
-    "crontime",
+    "crontools",
     "cronjobtimings",
     "cronbuilder",
     "cronjobbuilder",
@@ -18,7 +18,7 @@
   ],
   "files": [
     "README.md",
-    "lib/crontime.js"
+    "lib/crontools.js"
   ],
   "author": "Lambert <lambertweller@live.de>",
   "license": "GPL-3.0",
