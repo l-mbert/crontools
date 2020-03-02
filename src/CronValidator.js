@@ -190,8 +190,8 @@ const validateValue = (measurementOfTime, value) => {
 
         // The upper and lower part of the range are both either an valid weekday or month.
         // Check which case applies and check the corresponding part to be an month or an weekday too.
-        if (Constants.AllowedWeekday.includes(range[0])) {
-          if (!Constants.AllowedWeekday.includes(range[1])) {
+        if (Constants.AllowedWeekdays.includes(range[0])) {
+          if (!Constants.AllowedWeekdays.includes(range[1])) {
             throw new Error(
               'The upper part of the range is not an valid weekday but the lower part is. Both need to be an valid weekday.',
             );
@@ -215,8 +215,8 @@ const validateValue = (measurementOfTime, value) => {
           }
 
           // Could be an valid weekday
-          if (Constants.AllowedWeekday.includes(range[1])) {
-            if (!Constants.AllowedWeekday.includes(range[0])) {
+          if (Constants.AllowedWeekdays.includes(range[1])) {
+            if (!Constants.AllowedWeekdays.includes(range[0])) {
               throw new Error(
                 'The lower part of the range is not an valid weekday but the upper part is. Both need to be an valid weekday.',
               );
