@@ -55,7 +55,7 @@ It's just using CamelCase for the name, but for clarification:
 ## Using the Cronjob Timing Builder
 
 ```js
-// If you are using ES&
+// If you are using ES6
 import CronBuilder from 'crontime';
 // If you are using ES5
 var CronBuilder = require('crontime');
@@ -137,7 +137,7 @@ cronTiming.build();
 **If the validation fails, the Validator will throw an Error.**
 
 ```js
-// If you are using ES&
+// If you are using ES6
 import { CronValidator } from 'crontime';
 // If you are using ES5
 var { CronValidator } = require('crontime');
