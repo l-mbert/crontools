@@ -21,7 +21,7 @@
     "lib/crontime.js"
   ],
   "author": "Lambert <lambertweller@live.de>",
-  "license": "GNU",
+  "license": "GPL-3.0",
   "scripts": {
     "build": "rollup -c"
   },
