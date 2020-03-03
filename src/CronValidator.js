@@ -131,7 +131,7 @@ const validateValue = (measurementOfTime, value) => {
     value = value + '';
   }
 
-  if (value !== '*') {
+  if (value !== '*' || value !== '?') {
     if (value.indexOf('-') >= 0) {
       let range = value.split('-');
 
