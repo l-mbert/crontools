@@ -9,13 +9,13 @@ An Package to manipulate, build and validate Cronjob Timings.
 **Using npm**
 
 ```sh
-# npm install crontime
+# npm install crontools
 ```
 
 **Using yarn**
 
 ```sh
-# yarn add crontime
+# yarn add crontools
 ```
 
 ---
