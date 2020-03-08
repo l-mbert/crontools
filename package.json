@@ -1,6 +1,6 @@
 {
   "name": "crontools",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An JS Package to manipulate, build and validate Cronjob Timings.",
   "main": "lib/crontime.js",
   "repository": {
