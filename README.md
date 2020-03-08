@@ -56,9 +56,9 @@ It's just using CamelCase for the name, but for clarification:
 
 ```js
 // If you are using ES6
-import CronBuilder from 'crontime';
+import CronBuilder from 'crontools';
 // If you are using ES5
-var CronBuilder = require('crontime');
+var CronBuilder = require('crontools');
 // ...
 
 var cronTiming = new CronBuilder();
@@ -138,9 +138,9 @@ cronTiming.build();
 
 ```js
 // If you are using ES6
-import { CronValidator } from 'crontime';
+import { CronValidator } from 'crontools';
 // If you are using ES5
-var { CronValidator } = require('crontime');
+var { CronValidator } = require('crontools');
 // ...
 ```
 
