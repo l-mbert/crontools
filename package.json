@@ -3,10 +3,7 @@
   "version": "0.0.7",
   "description": "An JS Package to manipulate, build and validate Cronjob Timings.",
   "main": "lib/crontime.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/l-mbert/crontools"
-  },
+  "repository": "git://github.com/l-mbert/crontools.git",
   "keywords": [
     "cron",
     "crontools",
@@ -33,5 +30,7 @@
     "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-babel": "^4.3.3"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
