@@ -1,6 +1,6 @@
 {
   "name": "crontools",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An JS Package to manipulate, build and validate Cronjob Timings.",
   "main": "lib/crontime.js",
   "repository": {
@@ -29,6 +29,7 @@
     "@babel/core": "^7.8.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.6",
-    "rollup-plugin-babel": "^4.3.3"
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-uglify": "^6.0.4"
   }
 }

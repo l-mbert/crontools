@@ -1,10 +1,11 @@
 import babel from 'rollup-plugin-babel';
+import { uglify } from 'rollup-plugin-uglify';
 
 export default {
   input: 'src/main.js',
   output: {
-    name: 'Crontime',
-    file: 'lib/crontime.js',
+    name: 'Crontools',
+    file: 'lib/crontools.js',
     format: 'cjs',
   },
   plugins: [
@@ -12,5 +13,6 @@ export default {
       exclude: 'node_modules/**',
       plugins: ['@babel/proposal-class-properties'],
     }),
+    uglify(),
   ],
 };
