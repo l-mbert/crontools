@@ -32,5 +32,6 @@
     "rollup": "^2.7.1",
     "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-babel": "^4.3.3"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
