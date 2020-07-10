@@ -1,4 +1,6 @@
 # Crontools
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fl-mbert%2Fcrontools.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fl-mbert%2Fcrontools?ref=badge_shield)
+
 
 An Package to manipulate, build and validate Cronjob Timings.
 
@@ -169,3 +171,7 @@ CronValidator.validateString('* * 1 * *');
 ```js
 CronValidator.validateValue('minute', 1);
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fl-mbert%2Fcrontools.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fl-mbert%2Fcrontools?ref=badge_large)
